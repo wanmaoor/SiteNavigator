@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Site Navigator</title>
+    <style type="text/css">
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="globalHeader">
+      <form action="https://www.baidu.com/s" class="searchForm" method="GET">
+        <input type="text" name="wd" />
+        <button type="submit">搜索</button>
+      </form>
+    </header>
+    <main class="globalMain">
+      <ul class="siteList">
+        <!-- <li>
+          <!-- !a标签是内联元素, 里面不能包含块级元素. a标签是个例外 --
+          <a href="https://www.acfun.cn">
+            <div class="site">
+              <div class="logo">A</div>
+              <div class="link">acfun.cn</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://bilibili.com">
+            <div class="site">
+              <div class="logo">
+                <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3335851201,737797255&fm=26&gp=0.jpg" alt="">
+              </div>
+              <div class="link">bilibili.com</div>
+            </div>
+          </a>
+        </li> -->
+        <li class="last">
+          <div class="addButton">
+            <div class="iconWrapper">
+              <svg class="icon">
+                <use xlink:href="#i-add"></use>
+              </svg>
+            </div>
+            <div class="text">
+              新增网站
+            </div>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <script src="///at.alicdn.com/t/font_808628_vtib6eh3rk.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

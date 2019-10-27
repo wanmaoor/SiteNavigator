@@ -1,0 +1,133 @@
+/** css reset */
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+/* * style */
+body {
+  background: #eee;
+  /* !虽然body高度是子元素高度决定, 但设置背景颜色还是会全屏设置 */
+}
+
+.globalHeader {
+  margin: 20px;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchForm>input {
+  width: 100%;
+  height: 40px;
+  margin-right: 10px;
+  padding: 0 10px;
+  /* !设置padding使得输入框内容不会紧挨着左边框 */
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  /* !修改border的样式, 不然巨丑 */
+}
+
+.searchForm>button {
+  white-space: nowrap;
+  padding: 0 10px;
+  width: 80px;
+  height: 40px;
+  background: rgba(4, 78, 189, 0.9);
+  color: white;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.globalMain {}
+
+.siteList {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.siteList>li {
+  margin-bottom: 10px;
+}
+
+.siteList .site {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 30px 0;
+}
+
+.siteList .site>.logo {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+}
+
+.siteList .site>.link {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.siteList .addButton {
+  border: 1px solid #ddd;
+  background: white;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.siteList .addButton .icon {
+  width: 64px;
+  height: 64px;
+}
+
+.siteList .addButton .iconWrapper{
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.siteList .addButton .text {
+  font-size: 14px;
+  margin-top: 4px;
+}
