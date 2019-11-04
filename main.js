@@ -9,7 +9,9 @@ const hashMap = xObject || [
       "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3335851201,737797255&fm=26&gp=0.jpg",
     logoType: "image",
     url: "https://www.bilibili.com"
-  }
+  },
+  { logo: "J", logoType: "text", url: "https://www.jd.com/" },
+  { logo: "T", logoType: "text", url: "https://www.taobao.com/" }
 ];
 const concatenate = url => {
   return url
