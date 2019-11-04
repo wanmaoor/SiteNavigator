@@ -46,6 +46,7 @@ const render = () => {
       arr.splice(index, 1)
       render()
     });
+    
   });
 };
 
@@ -71,3 +72,11 @@ window.onbeforeunload = () => {
   const string = JSON.stringify(hashMap);
   localStorage.setItem("site", string);
 };
+
+$(document).on("keypress", e => {
+  for (let index = 0; index < hashMap.length; index++) {
+    if(e.key.toUpperCase() === hashMap[index].logo.toUpperCase()){
+      window.open(hashMap[index].url)
+    }
+  }
+});

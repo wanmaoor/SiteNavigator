@@ -41,7 +41,7 @@ body {
   justify-content: space-between;
 }
 
-.searchForm>input {
+.searchForm > input {
   width: 100%;
   height: 40px;
   margin-right: 10px;
@@ -52,19 +52,19 @@ body {
   /* !修改border的样式, 不然巨丑 */
 }
 
-.searchForm>button {
+.searchForm > button {
   white-space: nowrap;
   padding: 0 10px;
   width: 80px;
   height: 40px;
   background: rgba(4, 78, 189, 0.9);
   color: white;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
   border-radius: 4px;
   font-size: 16px;
 }
 
-.globalMain {}
+
 
 .siteList {
   display: flex;
@@ -73,8 +73,8 @@ body {
   justify-content: space-between;
 }
 
-.siteList>li {
-  margin-bottom: 10px;
+.siteList > li {
+  margin-bottom: 20px;
 }
 
 .siteList .site {
@@ -88,13 +88,20 @@ body {
   border-radius: 4px;
   padding: 30px 0;
   position: relative;
+  cursor: pointer;
 }
 .siteList .site .close {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 7px;
+  top: 5px;
+  display: none;
+  transition: all .5s;
+  cursor: default;
 }
-.siteList .site>.logo {
+.siteList .site:hover .close {
+  display: block;
+}
+.siteList .site > .logo {
   width: 64px;
   height: 64px;
   display: flex;
@@ -103,7 +110,7 @@ body {
   font-size: 64px;
 }
 
-.siteList .site>.link {
+.siteList .site > .link {
   font-size: 14px;
   margin-top: 4px;
 }
@@ -124,7 +131,7 @@ body {
   height: 64px;
 }
 
-.siteList .addButton .iconWrapper{
+.siteList .addButton .iconWrapper {
   width: 64px;
   height: 64px;
   display: flex;
@@ -135,4 +142,25 @@ body {
 .siteList .addButton .text {
   font-size: 14px;
   margin-top: 4px;
+}
+
+@media (min-width: 500px) {
+  .searchForm {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .globalMain {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .siteList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .globalHeader {
+    margin: 80px 0;
+  }
 }
