@@ -87,8 +87,13 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 30px 0;
+  position: relative;
 }
-
+.siteList .site .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .siteList .site>.logo {
   width: 64px;
   height: 64px;
