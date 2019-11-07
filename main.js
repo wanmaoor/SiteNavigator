@@ -3,7 +3,6 @@ const $lastLi = $siteList.find("li.last");
 const xObject = JSON.parse(localStorage.getItem("site"));
 let $logo;
 const hashMap = xObject || [
-  { logo: "A", logoType: "text", url: "https://www.acfun.cn" },
   {
     logo:
       "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3335851201,737797255&fm=26&gp=0.jpg",
@@ -59,7 +58,6 @@ $(".addButton").on("click", () => {
   if (url.indexOf("http") !== 0) {
     url = "https://" + url;
   }
-  console.log(url);
   hashMap.push({
     logo: concatenate(url)[0].toUpperCase(),
     logoType: "text",
@@ -73,6 +71,7 @@ $(".close").on("click", e => {});
 window.onbeforeunload = () => {
   const string = JSON.stringify(hashMap);
   localStorage.setItem("site", string);
+  document.querySelector('.searchForm input').value = ''
 };
 
 $(document).on("keypress", e => {
